@@ -1,0 +1,225 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(212, 212, 212);
+  margin-bottom: 80px;
+}
+
+.dark-mode {
+  transition: all 0.5s ease-in-out;
+  background-color: black;
+  color: white;
+}
+
+header {
+  background-color: rgb(2, 0, 0);
+  color: #fff;
+}
+header .cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+header .cabecalho .logo {
+  font-size: 20px;
+  margin-right: 20px;
+}
+header .cabecalho input {
+  padding-left: 7px;
+  border-radius: 7px;
+  border: none;
+}
+header .cabecalho button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 5px;
+  color: #fff;
+}
+header .cabecalho button:hover {
+  color: green;
+}
+header .menu-hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  margin-right: 0;
+}
+header .menu-hamburger .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu-hamburger:hover .bar {
+  background-color: green;
+}
+
+main .secao-de-menu-top {
+  background-color: #fff;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 10px black;
+}
+main .secao-carrosel-receitas .progress-container {
+  width: 100%;
+  height: 2px;
+  background-color: #eee; /* Cor do fundo da barra */
+  margin-bottom: 10px;
+}
+main .secao-carrosel-receitas .progress-bar {
+  width: 0%; /* Começa vazia */
+  height: 100%;
+  background-color: #311afa; /* Cor do preenchimento (ex: vermelho) */
+  transition: width 0.3s ease; /* Faz o deslize ser suave */
+}
+main .row .card {
+  transition: all 0.5s ease-in-out;
+  border: 1px solid grey;
+}
+main .row .card i {
+  height: 100%;
+  font-size: 20px;
+  margin-top: 7px;
+}
+main .row .card .card-body h6 {
+  font-size: 11px;
+}
+main .carrosel .card {
+  margin: 0 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px black;
+  margin-bottom: 10px;
+}
+main .carrosel .card .imagem-carrosel {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .carrosel .card button {
+  font-size: 12px;
+}
+main .menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  max-width: 300px;
+  z-index: 1050;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  box-shadow: -2px 5px 10px black;
+}
+main .menu .card {
+  border-radius: 0;
+  height: 100vh;
+  padding: 0 !important;
+  border: none;
+}
+main .menu .card header {
+  background-color: black;
+}
+main .menu .card header .cabecalho {
+  /* Sobrescreve o padding herdado para alinhar o conteúdo corretamente */
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 37px;
+}
+main .menu .card .card-body {
+  color: #fff;
+}
+main .menu .card .card-body .form-check {
+  background-color: #424147;
+  height: 45px;
+}
+main .menu .card .card-body .menu-configuração-termos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #424147;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main .menu .card .card-body .menu-configuração-termos .config {
+  color: #fff;
+}
+main .menu .card .card-body .menu-configuração-termos button {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  width: 100%;
+  padding: 7px;
+}
+main .ativo {
+  display: block;
+  transform: translateX(0);
+}
+main .menu-footer {
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+}
+main .menu-footer .conteudo-footer {
+  display: flex;
+  gap: 5px;
+}
+main .menu-footer .conteudo-footer button {
+  width: 100%;
+  height: 50px;
+}
+main .chefs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .chefs .card {
+  box-shadow: 0 2px 10px black;
+}
+main .chefs .perfil {
+  width: 20%;
+  height: 50px;
+}
+main .chefs .perfil img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 200px;
+}
+main .chefs .nome p {
+  font-size: 10px;
+}
+main .chefs .card-body {
+  gap: 10px;
+  justify-content: space-between;
+}
+main .botao-ativo {
+  background-color: rgba(0, 0, 255, 0.637);
+  color: #fff;
+}
+main .botao-seguir-ativo {
+  background-color: green;
+  color: #fff;
+  border: none;
+}/*# sourceMappingURL=main.css.map */
