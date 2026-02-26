@@ -145,6 +145,7 @@ main{
             border: none;
             header{
                 background-color: cores.$coffee-brown;
+                border-left: 1px solid #ffffff91;
                 .cabecalho{
                     /* Sobrescreve o padding herdado para alinhar o conteúdo corretamente */
                     padding-top: 20px;
@@ -155,9 +156,14 @@ main{
             }
             .card-body{
                 color: #fff;
+                margin-top: 80px;
+                background-color: cores.$molten-lava;
+                border-left: 1px solid #ffffff91;
                 .form-check{
                     background-color: #424147;
                     height: 45px;
+                    border-bottom:1px solid #fff ;
+                    border-top: 1px solid #fff;
                 }
                 .menu-configuração-termos{
                     position: absolute;
@@ -167,6 +173,7 @@ main{
                     background-color:#424147;
                     padding-left: 15px;
                     padding-right: 15px;
+                    border-left: 1px solid #ffffff91;
                     .config{
                         color: #fff;
                     }

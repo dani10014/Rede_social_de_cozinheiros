@@ -142,6 +142,7 @@ main .menu .card {
 }
 main .menu .card header {
   background-color: #432818;
+  border-left: 1px solid rgba(255, 255, 255, 0.568627451);
 }
 main .menu .card header .cabecalho {
   /* Sobrescreve o padding herdado para alinhar o conteúdo corretamente */
@@ -152,10 +153,15 @@ main .menu .card header .cabecalho {
 }
 main .menu .card .card-body {
   color: #fff;
+  margin-top: 80px;
+  background-color: #780000;
+  border-left: 1px solid rgba(255, 255, 255, 0.568627451);
 }
 main .menu .card .card-body .form-check {
   background-color: #424147;
   height: 45px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
 }
 main .menu .card .card-body .menu-configuração-termos {
   position: absolute;
@@ -165,6 +171,7 @@ main .menu .card .card-body .menu-configuração-termos {
   background-color: #424147;
   padding-left: 15px;
   padding-right: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.568627451);
 }
 main .menu .card .card-body .menu-configuração-termos .config {
   color: #fff;
