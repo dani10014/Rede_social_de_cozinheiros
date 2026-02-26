@@ -32,10 +32,10 @@
     <main>
         <section class="secao-de-menu-top">
             <div class="container">
-                <h5 class="pt-3 pb-3">Explorar</h5>
+                <h5 class="pt-3 pb-3 text-dark">Explorar</h5>
                 <div class="row d-flex">
                     <div class="col-3">
-                        <div class="card btn-secao d-flex justify-content-center" id="botao-primario-secao">
+                        <div class="card btn-secao d-flex justify-content-center" id="botao-primario-secao" data-secao="receitas">
                             <i class="fa-solid fa-utensils text-center"></i>
                             <div class="card-body">
                                 <h6 class="text-center mb-0">Receitas</h6>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="card btn-secao d-flex justify-content-center">
+                        <div class="card btn-secao d-flex justify-content-center"data-secao="popular">
                             <i class="fa-solid fa-egg text-center"></i>
                             <div class="card-body">
                                 <h6 class="text-center mb-0">Popular</h6>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="card btn-secao d-flex justify-content-center">
+                        <div class="card btn-secao d-flex justify-content-center" data-secao="menu">
                             <i class="fa-solid fa-book-open text-center"></i>
                             <div class="card-body">
                                 <h6 class="text-center mb-0">Menu</h6>
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="card btn-secao d-flex justify-content-center">
+                        <div class="card btn-secao d-flex justify-content-center" data-secao="mercado">
                             <i class="fa-solid fa-basket-shopping text-center"></i>
                             <div class="card-body">
                                 <h6 class="text-center mb-0">Mercado</h6>
@@ -72,7 +72,7 @@
         <section class="mt-5 secao-carrosel-receitas">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center mb-2 ps-3 pe-3">
-                    <h5 class="border-bottom border-1 border-dark w-50 ">
+                    <h5 class="border-bottom border-1 border-light w-50 ">
                         Receitas em altas
                     </h5>
                     <i class="fa-solid fa-right-left"></i>
@@ -81,29 +81,29 @@
                     <div class="card">
                         <img src="./pexels-pixabay-262897.jpg" class="imagem-carrosel card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <button class="btn btn-primary">Verificar</button>
+                            <h5 class="card-title">Yakisoba</h5>
+                            <button class="btn btn-primary btn-verificar-receita">Verificar</button>
                         </div>
                     </div>
                     <div class="card">
                         <img src="./pexels-pixabay-262897.jpg" class="imagem-carrosel card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <button class="btn btn-primary">Verificar</button>
+                            <button class="btn btn-primary btn-verificar-receita">Verificar</button>
                         </div>
                     </div>
                     <div class="card">
                         <img src="./pexels-pixabay-262897.jpg" class="imagem-carrosel card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <button class="btn btn-primary">Verificar</button>
+                            <button class="btn btn-primary btn-verificar-receita">Verificar</button>
                         </div>
                     </div>
                     <div class="card">
                         <img src="./pexels-pixabay-262897.jpg" class="imagem-carrosel">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <button class="btn btn-primary">Verificar</button>
+                            <button class="btn btn-primary btn-verificar-receita">Verificar</button>
                         </div>
                     </div>
                 </div>
@@ -214,13 +214,67 @@
         </div>
         <div class="menu-footer">
             <div class="conteudo-footer">
-                <button class="btn btn-secondary active"><i class="fa-solid fa-house"></i></button>
-                <button class="btn btn-secondary"><i class="fa-solid fa-utensils"></i></button>
-                <button class="btn btn-secondary"><i class="fa-solid fa-users"></i></button>
-                <button class="btn btn-secondary"><i class="fa-solid fa-newspaper"></i></button>
+                <button class="active"><i class="fa-solid fa-house"></i></button>
+                <button><i class="fa-solid fa-utensils"></i></button>
+                <button><i class="fa-solid fa-users"></i></button>
+                <button><i class="fa-solid fa-newspaper"></i></button>
                 
             </div>
         </div>
+<div class="modal-receita">
+
+        <div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+            <div class="modal-dialog">
+        <div class="modal-content">
+
+        <div class="modal-header">
+            <img src="./pexels-pixabay-262897.jpg" alt="">
+        </div>
+
+        <div class="modal-body justify-content-center">
+            <h3 class="text-center border-bottom border-2 border-dark mb-2">Yakisoba</h3>
+            <h6 class="mb-2">Principais ingredientes:</h6>
+            <ul class="mb-4 border-bottom border-2">
+                <li>
+                    Carne: 500g de copa lombo ou barriga de porco fatiada bem fininha (estilo bacon, mas fresca).
+                </li>
+                <li>
+                    Vegetais: ½ repolho picado grosseiramente (como na foto), 1 cebola fatiada, 1 cenoura em tiras finas e cebolinha verde.
+                </li>
+                <li class="mb-2">
+                    O Molho (A alma do prato):
+                </li>
+            </ul>
+                <ul class="ms-4">
+                    <li>
+                        2 colheres (sopa) de Gochujang (pasta de pimenta coreana — essencial!).
+                    </li>
+                    <li>
+                        1 colher (sopa) de Gochugaru (pimenta em flocos coreana).
+                    </li>
+                    <li>
+                        2 colheres (sopa) de molho de soja (shoyu).
+                    </li>
+                    <li>
+                        1 colher (sopa) de açúcar ou mel.
+                    </li>
+                    <li>
+                        1 colher (sopa) de alho picado e 1 colher (chá) de gengibre ralado.
+                    </li>
+                    <li>
+                        1 colher (sopa) de óleo de gergelim torrado.
+                    </li>
+                </ul>
+        </div>
+
+        <div class="modal-footer w-100">
+            <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Fechar</button>
+        </div>
+
+    </div>
+    </div>
+    </div>
+</div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery (Obrigatório para o Slick) -->

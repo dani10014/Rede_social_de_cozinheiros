@@ -7,8 +7,10 @@
 }
 
 body {
-  background-color: rgb(212, 212, 212);
+  background-color: #780000;
   margin-bottom: 80px;
+  color: #fff;
+  margin-top: 81px;
 }
 
 .dark-mode {
@@ -18,8 +20,14 @@ body {
 }
 
 header {
-  background-color: rgb(2, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #432818;
   color: #fff;
+  box-shadow: 0 1px 5px black;
 }
 header .cabecalho {
   display: flex;
@@ -133,7 +141,7 @@ main .menu .card {
   border: none;
 }
 main .menu .card header {
-  background-color: black;
+  background-color: #432818;
 }
 main .menu .card header .cabecalho {
   /* Sobrescreve o padding herdado para alinhar o conteúdo corretamente */
@@ -178,15 +186,18 @@ main .menu-footer {
   bottom: 0;
   right: 0;
   width: 100%;
-  background-color: #fff;
 }
 main .menu-footer .conteudo-footer {
   display: flex;
-  gap: 5px;
+  gap: 2px;
 }
 main .menu-footer .conteudo-footer button {
+  background-color: #fff;
+  color: black;
   width: 100%;
   height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 main .chefs {
   display: flex;
@@ -222,4 +233,11 @@ main .botao-seguir-ativo {
   background-color: green;
   color: #fff;
   border: none;
+}
+main #meuModal .modal-content {
+  background-color: #fdf0d5;
+  color: #000000;
+}
+main #meuModal .modal-header img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

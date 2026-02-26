@@ -2,8 +2,10 @@
 @use "build/config/cores";
 
 body{
-    background-color: rgb(212, 212, 212);
+    background-color: cores.$molten-lava;
     margin-bottom: 80px;
+    color: #fff;
+    margin-top: 81px;
 }
 .dark-mode{
     transition: all 0.5s ease-in-out;
@@ -11,8 +13,14 @@ body{
     color: white
 }
 header{
-    background-color:cores.$corHeader;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: cores.$coffee-brown;
     color:cores.$corTexto;
+    box-shadow: 0 1px 5px black;
 
     .cabecalho{
         display: flex;
@@ -136,8 +144,7 @@ main{
             padding: 0 !important;
             border: none;
             header{
-                background-color: black
-                ;
+                background-color: cores.$coffee-brown;
                 .cabecalho{
                     /* Sobrescreve o padding herdado para alinhar o conteúdo corretamente */
                     padding-top: 20px;
@@ -184,13 +191,16 @@ main{
         bottom: 0;
         right: 0;
         width: 100%;
-        background-color: #fff;
         .conteudo-footer{
             display: flex;
-            gap: 5px;
+            gap: 2px;
             button{
+                background-color: #fff;
+                color: black;
                 width: 100%;
                 height: 50px;
+                border: 1px solid black;
+                border-radius: 10px;
             }
         }
     }
@@ -229,5 +239,14 @@ main{
         background-color: green;
         color: #fff;
         border: none;
+    }
+    #meuModal{
+        .modal-content{
+            background-color: cores.$papaya-whip;
+            color: #000000;
+        }
+        .modal-header img{
+            width: 100%;
+        }
     }
 }

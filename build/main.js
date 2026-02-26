@@ -5,8 +5,19 @@ let botoesSecao = document.querySelectorAll(".btn-secao");
 let botaoPrimarioSecao = document.querySelector("#botao-primario-secao");
 let botoesSeguir = document.querySelectorAll(".btn-seguir");
 let botaoDarkMode = document.querySelector("#switchDarkMode");
+let botoesVerificarReceita = document.querySelectorAll(".btn-verificar-receita");
+let modalReceita = new bootstrap.Modal(document.querySelector("#meuModal"));
 
-console.log(botaoDarkMode);
+
+
+botoesVerificarReceita.forEach(btn => {
+    btn.addEventListener('click',function(){
+        modalReceita.show();
+    })
+})
+
+
+
 
 botaoDarkMode.addEventListener("change",function(){
     let status = this.checked;
@@ -39,10 +50,16 @@ botaoPrimarioSecao.classList.add("botao-ativo");
 
 botoesSecao.forEach(button => {
     button.addEventListener("click",function(){
+        let secaoEscolhido = this.dataset.secao;
         botoesSecao.forEach(btn => btn.classList.remove("botao-ativo"));
         this.classList.add("botao-ativo");
+
+        if(secaoEscolhido === "popular"){
+            
+        }
     })
 });
+
 
 
 menuHamburger.addEventListener("click",function(){
